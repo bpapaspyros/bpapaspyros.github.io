@@ -527,7 +527,7 @@
 		}
 
 		#header nav {
-			margin: 1.5em 0 0 0;
+			margin: 2.5em 0 0 0;
 		}
 
 			#header nav li {
@@ -545,11 +545,11 @@
 				transform: translate3d(0,0,0);
 				display: inline-block;
 				height: 5.35em;
-				line-height: 5.885em;
+				line-height: 3.885em;
 				opacity: 0;
 				position: relative;
 				top: 0;
-				width: 5.35em;
+				width: 6.55em;
 			}
 
 				#header nav li:nth-child(1) {
@@ -666,7 +666,7 @@
 					}
 
 				#header nav a span {
-					display: none;
+					display: inline;
 				}
 
 /* Footer */
