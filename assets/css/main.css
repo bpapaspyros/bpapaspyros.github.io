@@ -52,6 +52,23 @@
 		-webkit-text-size-adjust: none;
 	}
 
+	.sem1, .sem2, .sem3, .sem4, .sem5,  .sem6,  .sem7,  .sem8  {
+		float: left;
+		overflow: hidden;
+		padding: 0;
+		border: 0;
+		margin-top: 20px;
+		width: 25%;
+		text-align: left;
+	}
+
+	.semesters {
+		width: 100%;
+		overflow: hidden;
+		margin-bottom: 100px;
+		margin-left: 5%;
+	}
+
 /* Box Model */
 
 	*, *:before, *:after {
@@ -1061,20 +1078,3 @@
 		#header nav {
 			padding: 0 1em;
 		} }
-
-		.sem1, .sem2, .sem3, .sem4, .sem5,  .sem6,  .sem7,  .sem8  {
-			float: left;
-			overflow: hidden;
-			padding: 0;
-			border: 0;
-			margin-top: 20px;
-			width: 25%;
-			text-align: left;
-		}
-
-		.semesters {
-			width: 100%;
-			overflow: hidden;
-			margin-bottom: 100px;
-			margin-left: 5%;
-		}
