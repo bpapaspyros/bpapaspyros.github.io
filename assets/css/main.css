@@ -874,6 +874,10 @@
 			body {
 				min-width: 320px;
 			}
+			
+			div {
+				overflow: scroll;
+			}
 
 			body, input, select, textarea {
 				font-size: 11pt;
@@ -978,6 +982,9 @@
 	@media screen and (max-width: 480px) {
 
 		/* BG */
+			div {
+				overflow: scroll;
+			}
 
 			@-moz-keyframes bg {
 				0% {
