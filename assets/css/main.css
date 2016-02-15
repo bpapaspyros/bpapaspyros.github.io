@@ -18,6 +18,10 @@
 		vertical-align: baseline;
 	}
 
+	div {
+		overflow: scroll;
+	}
+
 	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 		display: block;
 	}
@@ -61,7 +65,7 @@
 	body, input, select, textarea {
 		color: #fff;
 		font-family: 'Source Sans Pro', sans-serif;
-		font-size: 15pt;
+		font-size: 18pt;
 		font-weight: 300 !important;
 		letter-spacing: -0.025em;
 		line-height: 1.75em;
@@ -520,8 +524,17 @@
 			line-height: 1em;
 		}
 
+		#header h2 {
+			margin: 1.75em 0 0.25em 0;
+			font-size: 1.35em;
+			font-weight: 900;
+			letter-spacing: -0.035em;
+			line-height: 1em;
+		}
+
+
 		#header p {
-			font-size: 1.25em;
+			font-size: 1.50em;
 			margin: 0.75em 0 0.25em 0;
 			opacity: 0.75;
 		}
@@ -549,7 +562,9 @@
 				opacity: 0;
 				position: relative;
 				top: 0;
-				width: 6.55em;
+				width: 6.85em;
+				font-size: 1.0em;
+				font-weight: 600;
 			}
 
 				#header nav li:nth-child(1) {
@@ -1039,3 +1054,20 @@
 		#header nav {
 			padding: 0 1em;
 		} }
+
+		.sem1, .sem2, .sem3, .sem4, .sem5,  .sem6,  .sem7,  .sem8  {
+			float: left;
+			overflow: hidden;
+			padding: 0;
+			border: 0;
+			margin-top: 20px;
+			width: 25%;
+			text-align: left;
+		}
+
+		.semesters {
+			width: 100%;
+			overflow: hidden;
+			margin-bottom: 100px;
+			margin-left: 5%;
+		}
