@@ -4,21 +4,40 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is my personal website based on the jekyll template devlopr-jekyll.
 
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 
 urls:
     - text: Resume
-      url: /about
+      url: /resume
     - text: Publications
       url: /publications
-    - text: Teaching
-      url: /teaching
     - text: Blog
       url: /blog
     - text: Gallery
       url: /gallery
 
-# Edit these details
+scholar:
+  last_name: Vaios
+  first_name: Papaspyros
+
+  style: ieee
+  locale: en
+
+  sort_by: year
+  order: descending
+
+  source: /_bibliography/
+  bibliography: bibliography.bib
+  bibliography_template: bib
+
+  replace_strings: true
+  join_strings: true
+
+  details_dir: bibliography
+  details_layout: bibtex.html
+  details_link: Details
+
+  query: "@*"
 
 author_logo: profile.jpeg
 author: Vaios
@@ -72,6 +91,50 @@ author_work_experiences:
                  <b>Supervisor:</b> Jean-Baptiste Mouret. </br>
                  <b>Funding:</b> European Research Council (ERC) <a href=https://resibots.eu/>ResiBots Project</a>."
               visibility: true
+
+author_teaching_experiences:
+            - year: 2020
+              semester: Fall
+              duties: Teaching Assistant
+              workload: 2h/week
+              course: Basics of Monile Robotics
+              course_id: MICRO-452
+              college_logo: logos/logo_epfl.png
+              college_name: École polytechnique fédérale de Lausanne (EPFL)
+              course_url: https://edu.epfl.ch/coursebook/en/basics-of-mobile-robotics-MICRO-452
+              visibility: true
+            - year: 2020
+              semester: Spring
+              duties: Teaching Assistant, Designer/Maintainer of the course
+              workload: 4h/week
+              course: Robot Operating System (ROS) basics
+              course_id: MICRO-453
+              college_logo: logos/logo_epfl.png
+              college_name: École polytechnique fédérale de Lausanne (EPFL)
+              course_url: https://edu.epfl.ch/coursebook/fr/robotics-practicals-MICRO-453
+              visibility: true
+            - year: 2019
+              semester: Fall
+              course_url: https://edu.epfl.ch/coursebook/en/basics-of-mobile-robotics-MICRO-452
+              duties: Teaching Assistant
+              workload: 2h/week
+              course: Basics of Monile Robotics
+              course_id: MICRO-452
+              college_logo: logos/logo_epfl.png
+              college_name: École polytechnique fédérale de Lausanne (EPFL)
+              visibility: true
+            - year: 2019
+              duties: Teaching Assistant, Designer/Maintainer of the course
+              semester: Spring
+              workload: 4h/week
+              course: Robot Operating System (ROS) basics
+              duties: Teaching Assistant, Designer/Maintainer of the course
+              course_id: MICRO-453
+              college_logo: logos/logo_epfl.png
+              college_name: École polytechnique fédérale de Lausanne (EPFL)
+              course_url: https://edu.epfl.ch/coursebook/fr/robotics-practicals-MICRO-453
+              visibility: true
+
 
 author_education_details:
               - college_logo: logos/logo_epfl.png
@@ -158,6 +221,7 @@ show_author_education_details: true
 show_author_project_details: true
 show_author_interests: true
 show_full_cv_download: true
+show_author_teaching_experiences: true
 
 # pagination of posts
 paginate: 4

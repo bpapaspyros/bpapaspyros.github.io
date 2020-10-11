@@ -141,7 +141,31 @@ layout: default
       </div>
       {% endif %} {% endfor %}
     </div>
-    {% endif %} {% if site.show_author_education_details == true %}
+    {% endif %} {% if site.show_author_teaching_experiences == true %}
+    <div class="card">
+      <h1 class="card-title">Teaching Experience</h1>
+      <br />
+      {% for course in site.author_teaching_experiences %} {% if course.visibility
+      == true %}
+      <div class="row">
+        <div class="col-md-2">
+          <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ course.college_logo}}" class="company-logo" />
+        </div>
+        <div class="col-md-7">
+          <h4 class="experience-title">{{course.course }}</h4>
+          <h6 class="experience-info">{{course.college_name}}</h6>
+          <p class="experience-desc"><b>Duties:</b> {{course.duties}}</p>
+          <p class="experience-desc">{{course.description}}</p>
+          <p><a href="{{course.course_url}}">{{ course.course_id}}</a></p>
+        </div>
+        <div class="col-md-3">
+          <h4 style="text-align: right;"><b>{{ course.semester }} {{ course.year }}</b></h4>
+          <h6 style="text-align: right;"><b>{{ course.workload }}</b></h6>
+        </div>
+      </div>
+      {% endif %} {% endfor %}
+    </div>
+    {% endif %}{% if site.show_author_education_details == true %}
     <div class="card">
       <h1 class="card-title">Education</h1>
       <br />
