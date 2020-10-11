@@ -88,6 +88,17 @@ layout: default
     </div>
 
     <div class="card">
+      <h1>Contact Information</h1>
+      {% if site.contact_info %} {% for info in site.contact_info %} {% if info.telephone %}
+      {% for td in info.telephone %} {% if td.visibility == true %} {% if td.personal %} <h6><i
+          class="fas fa-mobile"></i> &nbsp;{{ td.personal }}</h6> {% endif %} {% if td.work %} <h6><i
+          class="fas fa-phone"></i>&nbsp;{{ td.work }}</h6> {% endif %} {% endif %} {% endfor %} {% endif %}
+      {% if info.postal_info %} {% for pi in info.postal_info %} {% if pi.visibility == true %} {% if pi.address %} <h6>
+        <i class="fas fa-address-card"></i> &nbsp;{{ pi.address }}</h6> {% endif %} {% endif %} {% endfor %} {% endif %}
+      {% endfor %} {% endif %}
+    </div>
+
+    <div class="card">
       <h1>Skills</h1>
 
       {%- include author_skills.html -%}
@@ -102,7 +113,11 @@ layout: default
     {% endif %}
   </div>
   <div class="col-lg-7">
-    {% if site.author_bio %}
+    {% if site.show_full_cv_download == true %}
+    <div class="card" style="text-align: center;">
+      <h5>Download my full CV <a href="{{site.url}}{{site.baseurl}}/assets/{{ site.full_cv_path }}">here</a>.</h5>
+    </div>
+    {% endif %} {% if site.author_bio %}
     <div class="card">
       <h1 class="card-title">About</h1>
       <p>{{ site.author_bio }}</p>
@@ -117,7 +132,7 @@ layout: default
         <div class="col-md-2">
           <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ exp.company_logo }}" class="company-logo" />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-10">
           <h4 class="experience-title">{{ exp.designation }}</h4>
           <h6 class="experience-info">{{ exp.company_name}}</h6>
           <p class="experience-desc">{{ exp.description }}</p>
@@ -136,7 +151,7 @@ layout: default
         <div class="col-md-2">
           <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ detail.college_logo}}" class="company-logo" />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-10">
           <h4 class="experience-title">{{detail.college_degree }}</h4>
           <h6 class="experience-info">{{detail.college_name}}</h6>
           <p class="experience-desc">{{detail.description}}</p>
@@ -147,15 +162,17 @@ layout: default
     </div>
     {% endif %} {% if site.show_author_project_details == true %}
     <div id="author_projects" class="card">
-      <h1 class="card-title">Projects</h1>
+      <h1 class="card-title">Open source contributions & Projects</h1>
       <br />
       {% for project in site.author_project_details %} {% if project.visibility
       == true %}
       <div class="row" id="project-card">
-        <div class="col-md-6">
-          <img src="{{site.url}}{{site.baseurl}}/assets/img/{{project.project_thumbnail}}" class="project-img" />
+        <div class="col-md-2">
+          {% if project.project_thumbnail %}
+          <img src="{{site.url}}{{site.baseurl}}/assets/img/logos/{{project.project_thumbnail}}" class="project-img" />
+          {% endif %}
         </div>
-        <div class="col-md-4 center">
+        <div class="col-md-10 center">
           <h4 class="experience-title">{{ project.project_title }}</h4>
           <h6 class="experience-info">{{ project.project_info}}</h6>
           <p class="experience-desc">{{ project.project_description }}</p>
@@ -163,6 +180,35 @@ layout: default
             <a class="project-link" href="{{project.project_url}}">{{ project.project_url}}</a>
           </p>
         </div>
+      </div>
+      <br />
+      {% endif %} {% endfor %}
+    </div>
+    {% endif %} {% if site.show_author_interests == true %}
+    <div id="author_projects" class="card">
+      <h1 class="card-title">Interests</h1>
+      <br />
+      {% for interest in site.author_interests %} {% if interest.visibility
+      == true %}
+      <div class="row" id="project-card">
+        {% for icol in interest.cols %} {% if icol.col1 %} {% assign items = icol.col1 | split: ", " %} {% if items %}
+        <div class="col-md-6 center">
+          <ul>
+            {% for i in items %}
+            <li>{{ i }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %} {% endif %} {% if icol.col2 %} {% assign items = icol.col2 | split: ", " %}
+        {% if items %}
+        <div class="col-md-6 center">
+          <ul>
+            {% for i in items %}
+            <li>{{ i }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %} {% endif %} {% endfor %}
       </div>
       <br />
       {% endif %} {% endfor %}

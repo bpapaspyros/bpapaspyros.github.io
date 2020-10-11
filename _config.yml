@@ -4,11 +4,15 @@ description: >- # this means to ignore newlines until "baseurl:"
   This is my personal website based on the jekyll template devlopr-jekyll.
 
 url: "" # the base hostname & protocol for your site, e.g. https://example.github.io
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 
 urls:
-    - text: About Me
+    - text: Resume
       url: /about
+    - text: Publications
+      url: /publications
+    - text: Teaching
+      url: /teaching
     - text: Blog
       url: /blog
     - text: Gallery
@@ -25,6 +29,8 @@ author_location: Lausanne, Switzerland
 author_website_url: "bpapaspyros.github.io"
 author_academic_page_url: "https://people.epfl.ch/vaios.papaspyros"
 typewrite-text: Doctoral Assistant @ EPFL | Robotics, Machine Learning, Collective behaviour
+
+full_cv_path: docs/VaiosPapaspyros.pdf
 
 author_work_experiences:
             - company_name: École polytechnique fédérale de Lausanne (EPFL)
@@ -67,27 +73,59 @@ author_work_experiences:
                  <b>Funding:</b> European Research Council (ERC) <a href=https://resibots.eu/>ResiBots Project</a>."
               visibility: true
 
-# author_education_details:
-#               - college_logo: mit.png
-#                 college_name: MIT
-#                 college_url: https://mit.org
-#                 college_degree: CS Engineer
-#                 description: Bachelor of Technology
-#                 visibility: true
+author_education_details:
+              - college_logo: logos/logo_epfl.png
+                college_name: École polytechnique fédérale de Lausanne (EPFL)
+                college_url: https://www.epfl.ch/en/
+                college_degree: Doctor of Philosophy (PhD)
+                description: Robotics, Control, and Intelligent Systems
+                visibility: true
+              - college_logo: logos/logo-upatras.png
+                college_name: University of Patras
+                college_url: https://www.ceid.upatras.gr/en
+                college_degree: Dipl. Eng.
+                description: Computer Engineering & Informatics
+                visibility: true
+              - college_logo: logos/logo-cgs.png
+                college_name: Costeas-Geitonas School
+                college_url: https://cgs.gr/en
+                college_degree: High School
+                visibility: true
 
-# author_project_details:
-#               - project_thumbnail: gamershub.png
-#                 project_title: Gamers Hub
-#                 project_description: A Platform built for Gamers and Game Devs
-#                 project_url: https://gamershub.in
-#                 visibility: true
-#               - project_thumbnail: hack4r.PNG
-#                 project_title: Hack4r
-#                 project_description: A Platform built for Hackers and Penetration Testers
-#                 project_url: https://hack4r.com
-#                 visibility: true
+author_project_details:
+              - 
+                # project_thumbnail: gamershub.png
+                project_title: robot_dart
+                project_description: I am a co-author of robot_dart, a flexible and generic C++11 wrapper for DART and is suitable for evolutionary computation.
+                project_url: https://github.com/resibots/robot_dart
+                visibility: true
+              - 
+                project_thumbnail: logo_limbo.png
+                project_title: limbo
+                project_description: I am a contributor to limbo, a highly templated C++11 Bayesian optimization framework.
+                project_url: https://github.com/resibots/limbo
+                visibility: true
+contact_info:
+              - telephone:
+                  - work: +41 21 693 56 80 
+                    personal: +41 78 860 11 13
+                    visibility: true
 
-# social links
+              - postal_info:
+                  - address: "EPFL STI IBI-STI </br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BIOROB </br> 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href=https://plan.epfl.ch/?room==ME%20B3%2030>ME B3 30</a> 
+                              (Bâtiment ME) </br> 
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Station 9 </br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CH-1015 Lausanne</br>
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Switzerland"
+                    visibility: true
+author_interests:
+              - cols:
+                    - col1: "Collective Behaviour, Programming & design patterns, Robotcs"
+                      col2: "Basketball, Music, Photography"
+                visibility: true
+
 twitter_username: bpapaspyros
 github_username:  bpapaspyros
 linkedin_username: bpapaspyros
@@ -118,6 +156,8 @@ permalink: pretty
 show_author_work_experiences: true
 show_author_education_details: true
 show_author_project_details: true
+show_author_interests: true
+show_full_cv_download: true
 
 # pagination of posts
 paginate: 4
