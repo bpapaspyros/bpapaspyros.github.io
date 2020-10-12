@@ -16,7 +16,6 @@ gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
     gem 'devlopr', '~> 0.4.5'
     gem 'jgd', '~> 1.12'
-    gem 'jekyll-scholar'
     gem 'jekyll-paginate', '~> 1.1.0'
     gem 'jekyll-gist', '~> 1.5.0'
     gem 'jekyll-seo-tag', '~> 2.6.1'

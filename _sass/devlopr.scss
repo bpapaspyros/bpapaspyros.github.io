@@ -403,11 +403,6 @@ header {
     background-color: var(--card-background-color) !important;
 }
 
-#blog-post-container{
-    margin-top: -20px;
-    margin-left: -35px;
-}
-
 .snipcart-modal__container {
     position: fixed;
     top: 0;
@@ -596,7 +591,8 @@ header {
     text-align: center;
 }
 .project-img{
-    width: 100%;
+    max-width: 60%;
+    max-height: 50%;
 }
 .project_details{
     padding: 10px;
@@ -1270,4 +1266,22 @@ footer {
 
 .section {
     max-width: 85%;
+}
+
+#publication-posts-container{
+    width: 80%;
+    max-width: 1500px;
+    margin: 30px auto !important;
+}
+
+.publication-post {
+    width: 100%;
+    max-width: 100%;
+    margin: 20px auto !important;
+}
+
+#blog-post-container{
+    margin: 20px auto !important;
+    width: 100%;
+    max-width: 2000px;
 }

@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<div class="row" id="publication-posts-container">
+    <div class="col-lg">
+
+        {% assign journals = site.emptyArray %}
+        {% assign conferences = site.emptyArray %}
+        {% assign workshops = site.emptyArray %}
+
+        {% assign sortedPublications = site.publications | sort: 'date' | reverse %}
+        {% for post in sortedPublications %}
+
+        {% if post.category == 'journals' %}
+        {% assign journals = journals | push: post %}
+        {% endif %}
+
+        {% if post.category == 'workshops' %}
+        {% assign workshops = workshops | push: post %}
+        {% endif %}
+
+        {% if post.category == 'conferences' %}
+        {% assign conferences = conferences | push: post %}
+        {% endif %}
+
+        {% endfor %}
+
+        {% if journals.size > 0 %}
+        <h1><b>Journals</b></h1>
+
+        <ul>
+            {% for post in journals %}
+            <li style="padding-left:20px; margin-left: 30px; margin-top: 15px;">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h5><b>{{ post.title }}</b></h5>
+                        <h6 class="mb-2 text-muted">{{ post.authors }}</h6>
+                        <h6 class="mb-2 text-muted"><em>{{ post.medium }}</em> -- {{ post.year }}</h6>
+                    </div>
+                    <div class="col-sm-2">
+                        <div style="text-align: right; float: right;">
+                            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}">See
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if workshops.size > 0 %}
+        <h1><b>Workshops</b></h1>
+        <ul>
+            {% for post in workshops %}
+            <li style="padding-left:20px; margin-left: 30px; margin-top: 15px;">
+                <div class="row">
+                    <div class="col-lg-10">
+                        <h5><b>{{ post.title }}</b></h5>
+                        <h6 class="mb-2 text-muted">{{ post.authors }}</h6>
+                        <h6 class="mb-2 text-muted"><em>{{ post.medium }}</em> -- {{ post.year }}</h6>
+                    </div>
+                    <div class="col-sm-2">
+                        <div style="text-align: right; float: right;">
+                            <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}">See
+                                more</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if conferences.size > 0 %}
+        <h1><b>Conferences</b></h1>
+        <ul>
+            {% for post in conferences %}
+            <div class="card publication-post">
+                <div class="card-body">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ post.authors }}</h6>
+                    <h6 class="card-subtitle mb-2 text-muted"><em>{{ post.medium }}</em> -- {{ post.year }}</h6>
+                    <div style="text-align: right; float: right;">
+                        <a href="{{ post.url | prepend: site.baseurl }}" data-disqus-identifier="{{ post.url }}">See
+                            more</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</div>

@@ -1,5 +1,5 @@
-title: Home
-subtitle: Welcome to Vaios' personal website !
+title: Vaios Papaspyros' Website
+subtitle: Welcome !
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal website based on the jekyll template devlopr-jekyll.
 
@@ -185,7 +185,7 @@ contact_info:
                     visibility: true
 author_interests:
               - cols:
-                    - col1: "Collective Behaviour, Programming & design patterns, Robotcs"
+                    - col1: "Collective Behaviour, Programming & design patterns, Robotics"
                       col2: "Basketball, Music, Photography"
                 visibility: true
 
@@ -224,9 +224,16 @@ show_full_cv_download: true
 show_author_teaching_experiences: true
 
 # pagination of posts
-paginate: 4
-per_page: 4
+paginate: 5
+per_page: 5
 paginate_path: "/blog/page/:num/"
+
+collections:
+  publications:
+    permalink: /publications/:path/
+    output: true
+
+emptyArray: []
 
 # minify
 # compress_html:
