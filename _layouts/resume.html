@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<div class="row ">
-  <div class="col-lg-4 offset-md-1">
+<div class="row" style="width: 100%; margin: 0 auto !important; float: center;">
+  <div class="col-lg-4 offset-md-1" style="max-width: 80%; margin: 15px auto !important; float: center;">
     <div class="card" id="profile-card">
       <a href="/">
         <img src="{{site.url}}{{site.baseurl}}/assets/img/{{ site.author_logo }}" class="profile-img" />
       </a>
-      <h1 class="profile-name">{{ site.title }}</h1>
-      <p class="profile-bio">{{ site.subtitle }}</p>
+      <h1 class="profile-name">{{ site.fullname }}</h1>
+      <p class="profile-bio">{{ site.bio }}</p>
       {% if site.github_username %} {%- include github_follow_button.html -%} {%
       endif %}
 
@@ -112,7 +112,7 @@ layout: default
     </div>
     {% endif %}
   </div>
-  <div class="col-lg-7">
+  <div class="col-lg-7" style="width: 100%; margin: 15px auto !important; float: center;">
     {% if site.show_full_cv_download == true %}
     <div class="card" style="text-align: center;">
       <h5>Download my full CV <a href="{{site.url}}{{site.baseurl}}/assets/{{ site.full_cv_path }}">here</a>.</h5>
@@ -158,9 +158,9 @@ layout: default
           <p class="experience-desc">{{course.description}}</p>
           <p><a href="{{course.course_url}}">{{ course.course_id}}</a></p>
         </div>
-        <div class="col-md-3">
-          <h4 style="text-align: right;"><b>{{ course.semester }} {{ course.year }}</b></h4>
-          <h6 style="text-align: right;"><b>{{ course.workload }}</b></h6>
+        <div class="col-md-3 off">
+          <h4 style="text-align: right; margin-right: 5%;"><b>{{ course.semester }} {{ course.year }}</b></h4>
+          <h6 style="text-align: right; margin-right: 5%;"><b>{{ course.workload }}</b></h6>
         </div>
       </div>
       {% endif %} {% endfor %}

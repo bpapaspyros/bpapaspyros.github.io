@@ -1,4 +1,6 @@
 title: Vaios Papaspyros' Website
+fullname: Vaios Papaspyros
+# bio: 
 subtitle: Welcome !
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal website based on the jekyll template devlopr-jekyll.
