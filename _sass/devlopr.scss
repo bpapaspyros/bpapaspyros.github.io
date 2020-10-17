@@ -1296,4 +1296,9 @@ footer {
 
 code {
     white-space : pre-wrap !important;
-  }
+}
+
+.custom_switch {
+    position: relative;
+    cursor: pointer;
+}
