@@ -6,7 +6,7 @@ category: journals
 authors: Ramon Escobedo and Valentin Lecheval and Vaios Papaspyros and Frank Bonnet and Francesco Mondada and Clément Sire and Guy Theraulaz
 medium: Philosophical Transactions of the Royal Society B
 year: 2020
-date: '17-10-20'
+date: '20-10-17'
 ---
 
 # Abstract 
