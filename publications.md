@@ -1,5 +1,0 @@
----
-layout: bibliography
-title: Publications
----
- 
