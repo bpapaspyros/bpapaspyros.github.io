@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: bpapaspyros.github.io/sitemap.xml
