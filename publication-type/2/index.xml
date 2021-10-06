@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2 | Vaios&#39; homepage</title>
-    <link>/publication-type/2/</link>
-      <atom:link href="/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://bpapaspyros.github.io/publication-type/2/</link>
+      <atom:link href="https://bpapaspyros.github.io/publication-type/2/index.xml" rel="self" type="application/rss+xml" />
     <description>2</description>
     <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 14 Sep 2020 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>/images/icon_hudafaa70231b9eee3e9c6457882ec7a15_27608_512x512_fill_lanczos_center_3.png</url>
+      <url>https://bpapaspyros.github.io/images/icon_hudafaa70231b9eee3e9c6457882ec7a15_27608_512x512_fill_lanczos_center_3.png</url>
       <title>2</title>
-      <link>/publication-type/2/</link>
+      <link>https://bpapaspyros.github.io/publication-type/2/</link>
     </image>
     
     <item>
       <title>A data-driven method for reconstructing and modelling social interactions in moving animal groups</title>
-      <link>/publication/philosophical_2020/</link>
+      <link>https://bpapaspyros.github.io/publication/philosophical_2020/</link>
       <pubDate>Mon, 14 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>/publication/philosophical_2020/</guid>
+      <guid>https://bpapaspyros.github.io/publication/philosophical_2020/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bidirectional interactions facilitate the integration of a robot into a shoal of zebrafish Danio rerio</title>
-      <link>/publication/plos_2019/</link>
+      <link>https://bpapaspyros.github.io/publication/plos_2019/</link>
       <pubDate>Tue, 20 Aug 2019 00:00:00 +0000</pubDate>
-      <guid>/publication/plos_2019/</guid>
+      <guid>https://bpapaspyros.github.io/publication/plos_2019/</guid>
       <description></description>
     </item>
     
