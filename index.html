@@ -1,4 +1,358 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; URL=https://vpapaspyros.com/">
-<link rel="canonical" href="https://vpapaspyros.com/">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vaios Papaspyros — Senior Physical AI Engineer</title>
+  <meta name="description" content="Personal website of Vaios Papaspyros — Senior Physical AI Engineer. PhD from EPFL. Specializing in autonomy, robot perception, and embodied AI for real-world robotics.">
+  <meta property="og:title" content="Vaios Papaspyros — Senior Physical AI Engineer">
+  <meta property="og:description" content="PhD from EPFL. Specializing in autonomy, robot perception, and embodied AI for real-world robotics.">
+  <meta property="og:image" content="https://vpapaspyros.com/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vpapaspyros.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://vpapaspyros.com/img/og-image.png">
+  <link rel="icon" href="favicon.ico" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">VP</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div id="cursor-glow" aria-hidden="true"></div>
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <img src="img/hero-robot.webp" alt="" class="hero-img parallax-img" data-speed="0.03" aria-hidden="true">
+    <div class="container">
+      <p class="hero-greeting hero-anim" style="--i:0">Hi, I'm</p>
+      <h1 class="hero-name hero-anim" style="--i:1">Vaios Papaspyros</h1>
+      <p class="hero-title hero-anim" style="--i:2">Senior Physical AI Engineer</p>
+      <p class="hero-bio hero-anim" style="--i:3">
+        PhD from EPFL &middot; Specializing in autonomy, robot perception,
+        and embodied AI for real-world robotics.
+      </p>
+      <div class="hero-links hero-anim" style="--i:4">
+        <a href="https://github.com/bpapaspyros" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/bpapaspyros" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://scholar.google.gr/citations?user=4CCqmEUAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/></svg>
+        </a>
+        <a href="#" id="email-icon" aria-label="Email">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-about" id="about">
+    <img src="img/swarm.webp" alt="" class="about-bg parallax-img" data-speed="0.04" aria-hidden="true">
+    <div class="container">
+      <h2 class="section-label reveal"><span class="section-number">01.</span> About</h2>
+      <div class="about-content reveal">
+        <p>
+          I'm a Senior Physical AI Engineer based in Zurich, Switzerland, specializing in
+          <strong>autonomy</strong>, <strong>robot perception</strong>, and
+          <strong>embodied AI</strong> systems for real-world robotics platforms.
+        </p>
+        <p>
+          I hold a <strong>PhD from EPFL</strong> where I studied the collective dynamics of fish
+          shoals and built robots that could integrate into groups of living fish in real time —
+          bridging the gap between biological and artificial systems.
+        </p>
+        <p>
+          My expertise spans motion generation, autonomous navigation, robot learning, sim-to-real
+          transfer, and high-performance robotics software. I've published in venues like the
+          <em>Journal of the Royal Society Interface</em>, <em>IEEE Access</em>, and <em>PLOS ONE</em>,
+          and review for <em>Nature Communications</em>, <em>ICRA</em>, <em>IROS</em>, and <em>NeurIPS</em>.
+        </p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h3>Programming</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">C++20</span>
+            <span class="skill-pill">Python</span>
+            <span class="skill-pill">Go</span>
+            <span class="skill-pill">CUDA</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Robotics</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">ROS 1 &amp; 2</span>
+            <span class="skill-pill">Isaac Sim / Lab</span>
+            <span class="skill-pill">MuJoCo</span>
+            <span class="skill-pill">SLAM &amp; Navigation</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>ML / AI</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">PyTorch</span>
+            <span class="skill-pill">VLMs / VLAs</span>
+            <span class="skill-pill">Reinforcement Learning</span>
+            <span class="skill-pill">Sim-to-Real</span>
+          </div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Systems</h3>
+          <div class="skill-pills">
+            <span class="skill-pill">Docker &amp; CI/CD</span>
+            <span class="skill-pill">Jetson</span>
+            <span class="skill-pill">EtherCAT / Beckhoff</span>
+            <span class="skill-pill">Real-Time Systems</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt section-exp" id="experience">
+    <img src="img/circuit-board.webp" alt="" class="exp-bg parallax-img" data-speed="0.03" aria-hidden="true">
+    <div class="container">
+      <h2 class="section-label reveal"><span class="section-number">02.</span> Experience</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Feb 2026 — Present</div>
+          <div class="timeline-body">
+            <h3>Senior Physical AI Engineer</h3>
+            <p class="timeline-company"><a href="https://cyberwave.com" target="_blank" rel="noopener">Cyberwave Switzerland GmbH</a> &middot; Zurich, Switzerland</p>
+            <p class="timeline-desc">
+              Autonomous navigation, robotics SDK architecture, perception pipelines,
+              and 3D reconstruction.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Jan 2024 — Jan 2026</div>
+          <div class="timeline-body">
+            <h3>Robotics Application Engineer</h3>
+            <p class="timeline-company"><a href="https://aica.tech" target="_blank" rel="noopener">AICA SA</a> &middot; Lausanne, Switzerland</p>
+            <p class="timeline-desc">
+              Motion generation and control for industrial robotic systems, ML-based adaptive
+              robot behaviour, and GPU/ML deployment pipelines.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Mar 2018 — Nov 2023</div>
+          <div class="timeline-body">
+            <h3>Doctoral Assistant</h3>
+            <p class="timeline-company"><a href="https://epfl.ch" target="_blank" rel="noopener">EPFL</a> &middot; Lausanne, Switzerland</p>
+            <p class="timeline-desc">
+              Deep learning for collective animal behaviour, real-time computer vision,
+              mobile robot platform design, and embedded control software.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">Jun 2017 — Nov 2017</div>
+          <div class="timeline-body">
+            <h3>Research Engineer</h3>
+            <p class="timeline-company">MEAD, <a href="https://www.upatras.gr" target="_blank" rel="noopener">University of Patras</a> &middot; Patras, Greece</p>
+            <p class="timeline-desc">
+              Multi-robot coordination, aerial-ground drone swarm integration, and
+              waypoint tracking software.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">May 2016 — Oct 2016</div>
+          <div class="timeline-body">
+            <h3>Research Intern</h3>
+            <p class="timeline-company"><a href="https://www.inria.fr/en/inria-centre-universite-lorraine" target="_blank" rel="noopener">Inria Nancy Grand-Est</a> &middot; Nancy, France</p>
+            <p class="timeline-desc">
+              Safety-aware reinforcement learning, CPG-based locomotion controllers,
+              and robot damage recovery on the iCub humanoid.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-label reveal" style="margin-top: 5rem"><span class="section-number">02b.</span> Education</h2>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2018 — 2023</div>
+          <div class="timeline-body">
+            <h3>Doctor of Philosophy (PhD)</h3>
+            <p class="timeline-company"><a href="https://epfl.ch" target="_blank" rel="noopener">EPFL</a> &middot; Robotics, Control, and Intelligent Systems</p>
+            <p class="timeline-desc">
+              Supervised by Prof. Francesco Mondada (Mobots group). Funded by EPFL and the SNSF.
+            </p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-date">2012 — 2017</div>
+          <div class="timeline-body">
+            <h3>M.Eng in Computer Engineering &amp; Science</h3>
+            <p class="timeline-company"><a href="https://www.upatras.gr" target="_blank" rel="noopener">University of Patras</a> &middot; Greece</p>
+            <p class="timeline-desc">
+              Thesis completed at Inria Nancy (France): <em>Safety-Aware Intelligent Trial-and-Error
+              for Robot Damage Recovery.</em>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-pub" id="publications">
+    <img src="img/neural-fish.webp" alt="" class="pub-bg parallax-img" data-speed="0.05" aria-hidden="true">
+    <div class="container">
+      <h2 class="section-label reveal"><span class="section-number">03.</span> Publications</h2>
+      <p class="section-subtitle reveal">Selected peer-reviewed work. Full list on <a href="https://scholar.google.gr/citations?user=4CCqmEUAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+
+      <div class="pub-list">
+        <article class="pub-item reveal">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <h3><a href="https://doi.org/10.1088/1748-3190/ad577a" target="_blank" rel="noopener">Quantifying the biomimicry gap in biohybrid robot-fish pairs</a></h3>
+            <p class="pub-authors"><strong>Papaspyros V</strong>, Theraulaz G, Sire C, Mondada F.</p>
+            <p class="pub-venue">Bioinspiration &amp; Biomimetics</p>
+          </div>
+        </article>
+        <article class="pub-item reveal">
+          <span class="pub-year">2024</span>
+          <div class="pub-body">
+            <h3><a href="https://doi.org/10.1098/rsif.2023.0630" target="_blank" rel="noopener">Predicting the long-term collective behaviour of fish pairs with deep learning</a></h3>
+            <p class="pub-authors"><strong>Papaspyros V</strong>, Escobedo R, Alahi A, Theraulaz G, Sire C, Mondada F.</p>
+            <p class="pub-venue">Journal of the Royal Society Interface</p>
+          </div>
+        </article>
+        <article class="pub-item reveal">
+          <span class="pub-year">2023</span>
+          <div class="pub-body">
+            <h3><a href="https://doi.org/10.1109/ACCESS.2023.3290960" target="_blank" rel="noopener">A biohybrid interaction framework for the integration of robots in animal societies</a></h3>
+            <p class="pub-authors"><strong>Papaspyros V</strong>, Burnier D, Cherfan R, Theraulaz G, Sire C, Mondada F.</p>
+            <p class="pub-venue">IEEE Access</p>
+          </div>
+        </article>
+        <article class="pub-item reveal">
+          <span class="pub-year">2019</span>
+          <div class="pub-body">
+            <h3><a href="https://doi.org/10.1371/journal.pone.0220559" target="_blank" rel="noopener">Bidirectional interactions facilitate the integration of a robot into a shoal of zebrafish <em>Danio rerio</em></a></h3>
+            <p class="pub-authors"><strong>Papaspyros V</strong>, Bonnet F, Collignon B, Mondada F.</p>
+            <p class="pub-venue">PLOS ONE</p>
+          </div>
+        </article>
+        <article class="pub-item reveal">
+          <span class="pub-year">2016</span>
+          <div class="pub-body">
+            <h3><a href="https://arxiv.org/abs/1611.09419" target="_blank" rel="noopener">Safety-aware robot damage recovery using constrained Bayesian optimization and simulated priors</a></h3>
+            <p class="pub-authors"><strong>Papaspyros V</strong>, Chatzilygeroudis K, Vassiliades V, Mouret JB.</p>
+            <p class="pub-venue">BayesOpt Workshop, NeurIPS</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt section-projects" id="projects">
+    <img src="img/mobile-robot.webp" alt="" class="projects-bg parallax-img" data-speed="0.04" aria-hidden="true">
+    <div class="container">
+      <h2 class="section-label reveal"><span class="section-number">04.</span> Open Source</h2>
+      <div class="projects-grid">
+        <a class="project-card reveal" href="https://github.com/epfl-mobots/bobi" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">C++ / ROS</span>
+          </div>
+          <h3>BOBI</h3>
+          <p>ROS-based framework supporting robot-animal experimentation setups. Enables real-time biohybrid interactions between robots and fish.</p>
+        </a>
+        <a class="project-card reveal" href="https://github.com/epfl-mobots/find" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">Python</span>
+          </div>
+          <h3>find</h3>
+          <p>Analysis and modelling tools for fish collective behaviour. Includes trajectory processing, social interaction modelling, and visualization.</p>
+        </a>
+        <a class="project-card reveal" href="https://github.com/resibots/robot_dart" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">C++</span>
+          </div>
+          <h3>robot_dart</h3>
+          <p>Flexible and generic C++ wrapper for the DART physics simulator, designed for evolutionary computation and robot learning.</p>
+        </a>
+        <a class="project-card reveal" href="https://github.com/aica-technology/modulo" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">C++20 / ROS 2</span>
+          </div>
+          <h3>Modulo</h3>
+          <p>Extension layer to ROS 2 providing a modular framework for application composition through custom component classes in C++ and Python.</p>
+        </a>
+        <a class="project-card reveal" href="https://github.com/aica-technology/control-libraries" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">C++20</span>
+          </div>
+          <h3>control-libraries</h3>
+          <p>Library modules for full control loop algorithms: state representation, motion planning, kinematics, dynamics, and control.</p>
+        </a>
+        <a class="project-card reveal" href="https://github.com/resibots/limbo" target="_blank" rel="noopener">
+          <div class="project-card-header">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <span class="project-lang">C++</span>
+          </div>
+          <h3>limbo</h3>
+          <p>Highly templated C++11 Bayesian optimization framework for efficient black-box optimization.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-contact" id="contact">
+    <img src="img/wireframe-humanoid.webp" alt="" class="contact-bg parallax-img" data-speed="0.03" aria-hidden="true">
+    <div class="container contact-container">
+      <h2 class="section-label reveal"><span class="section-number">05.</span> Get in Touch</h2>
+      <p class="contact-text reveal">
+        I'm always interested in discussing robotics, ML, and collaborative opportunities.
+        Feel free to reach out.
+      </p>
+      <a class="contact-btn reveal" href="#" id="email-btn">Say Hello</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Vaios Papaspyros</p>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Back to top">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+  </button>
+  <script src="script.js"></script>
+</body>
+</html>
